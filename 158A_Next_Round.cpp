@@ -1,23 +1,24 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 int main ()
 {
     int n,k;
     cin >> n >> k;
-    int count = 0;
-    int a[n];
+    vector<int> v(n);
     int i = 0;
-    while(n--)
+    for(int i = 0; i < n; i++)
     {
-        cin >> a[i];
-        i++;
+        cin >> v[i];
     }
-    for(int j = 0; j < n; j++)
+    int count = 0, check = v[k-1];
+    for(int i = 0; i < n; i++)
     {
-        if(a[i] >= a[k])
+        if(v[i] >= check && v[i] > 0)
         {
-            count++;
+            count += 1;
         }
+        else break;
     }
     cout << count;
 }

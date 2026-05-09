@@ -1,23 +1,13 @@
-#include<bits/stdc++.h>
-using namespace std;
-int main(){
-    int n;
-    cin >> n;
-    int count = 0;
-    while(n / 10 != 0 || n > 0)
+    string s,t;
+    cin >> s >> t;
+    for(int i = s.size()-1; i <= 0; i--)
     {
-        if(n % 10 == 7 || n % 10 == 4)
-        {
-            count++;
-        }
-        n = n/10;
+        s[i];
     }
-    if(count == 4 || count == 7)
+    if(s == t)
     {
         cout << "YES";
     }
-    else
-    {
+    else{
         cout << "NO";
     }
-}

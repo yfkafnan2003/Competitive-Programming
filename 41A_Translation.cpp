@@ -1,25 +1,20 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    string s,t;
-    cin >> s >> t;
-    string g;
-    int count = 0;
-    for(int i = s.size()-1; i >= 0; i--)
-    {
-        g = s[i];
+  string a,b;
+  cin>>a>>b;
+  int size = a.size();
+  int okay = 1;
+  for(int i = 0, j = size-1; i < j ;i++,j--){
+    if(a[i] != b[j]){
+      okay = 0;
+      break;
     }
-    if(g==t)
-    {
-         count++;
-    }
-    cout << count;
-    if(count == t.size())
-    {
-        cout << "YES";
-    }
-    else
-    {
-        cout << "NO";
-    }
+  }
+  if(!okay){
+    cout<<"NO"<<endl;
+  }
+  else{
+    cout<<"YES"<<endl;
+  }
 }

@@ -3,22 +3,16 @@ using namespace std;
 int main(){
     int n;
     cin >> n;
+    int p[1000],q[1000];
     int count = 0;
-    for(int i = 1;i < n; i=i+2)
+    for(int i = 0; i < n; i++)
     {
-        count = count - i;
-    }
-    for(int i = 2; i < n; i=i+2)
-    {
-        count = count + i;
-    }
-    if(n % 2 == 0)
-    {
-        count = count + n;
-    }
-    else
-    {
-        count = count - n;
+        cin >> p[i] >> q[i];
+        if(p[i] != q[i])
+        {
+            count++;
+        }
     }
     cout << count;
+
 }
